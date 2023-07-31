@@ -6,15 +6,14 @@
 
 constexpr bool topbar = true;
 
-constexpr int paddingX = 10;
+constexpr int paddingX = 8;
 constexpr int paddingY = 3;
 
 // See https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
-constexpr const char* font = "Sans 12";
+constexpr const char* font = "JetBrainsMono Nerd Font Bold 9";
 
-constexpr ColorScheme colorInactive = {Color(0xbb, 0xbb, 0xbb), Color(0x22, 0x22, 0x22)};
-constexpr ColorScheme colorActive = {Color(0xee, 0xee, 0xee), Color(0x00, 0x55, 0x77)};
-constexpr const char* termcmd[] = {"foot", nullptr};
+constexpr ColorScheme colorInactive = {Color(0xc0, 0xc0, 0xc0), Color(0x28, 0x2c, 0x34)};
+constexpr ColorScheme colorActive = {Color(0x28, 0x2c, 0x34), Color(0x61, 0xaf, 0xef),};
 
 static std::vector<std::string> tagNames = {
 	"1", "2", "3",
@@ -23,5 +22,4 @@ static std::vector<std::string> tagNames = {
 };
 
 constexpr Button buttons[] = {
-	{ ClkStatusText,   BTN_RIGHT,  spawn,      {.v = termcmd} },
 };
