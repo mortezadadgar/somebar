@@ -181,7 +181,7 @@ void Bar::click(Monitor* mon, int x, int, int btn)
 		control = ClkWinTitle;
 	} else if (x > _layoutCmp.x) {
 		control = ClkLayoutSymbol;
-	} else for (auto tag = _tags.size()-1; tag >= 0; tag--) {
+	} else for (int tag = _tags.size()-1; tag >= 0; tag--) {
 		if (x > _tags[tag].component.x) {
 			control = ClkTagBar;
 			arg.ui = 1<<tag;
