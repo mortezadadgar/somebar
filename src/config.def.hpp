@@ -22,4 +22,6 @@ static std::vector<std::string> tagNames = {
 };
 
 constexpr Button buttons[] = {
+	{ ClkTagBar,       BTN_LEFT,   view,       {0} },
+	{ ClkTagBar,       BTN_RIGHT,  tag,        {0} },
 };

@@ -85,6 +85,17 @@ static int statusFifoFd {-1};
 static int statusFifoWriter {-1};
 static bool quitting {false};
 
+// update keybindings to match your dwl
+void view(Monitor& m, const Arg& arg)
+{
+	int tag = arg.ui + 1;
+	system((std::string("wtype -M logo ") + std::to_string(tag) ).c_str());
+}
+void tag(Monitor& m, const Arg& arg)
+{
+	int tag = arg.ui + 1;
+	system((std::string("wtype -M logo -M ctrl ") + std::to_string(tag) ).c_str());
+}
 void spawn(Monitor&, const Arg& arg)
 {
 	if (fork() == 0) {

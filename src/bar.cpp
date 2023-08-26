@@ -182,9 +182,10 @@ void Bar::click(Monitor* mon, int x, int, int btn)
 	} else if (x > _layoutCmp.x) {
 		control = ClkLayoutSymbol;
 	} else for (int tag = _tags.size()-1; tag >= 0; tag--) {
+		// you may need logic to skip tags if they are hidden elsewhere.
 		if (x > _tags[tag].component.x) {
 			control = ClkTagBar;
-			arg.ui = 1<<tag;
+			arg.ui = tag;
 			argp = &arg;
 			break;
 		}
